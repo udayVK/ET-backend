@@ -10,15 +10,18 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 @SpringBootApplication
 @RestController
 @Configuration
+@EnableSwagger2
 public class TrackApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TrackApplication.class, args);
 	}
-	@GetMapping("/")
+//	@GetMapping("/")
 	public String hello(){
 		return "hello vm";
 	}
